@@ -2,7 +2,7 @@
   "name": "pokedex-web",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://pokedex-qsn2d4sgb-jvaides.vercel.app/",
+  "homepage": ".",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
