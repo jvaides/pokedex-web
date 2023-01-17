@@ -10,4 +10,4 @@ En el directorio del proyecto puedes correr el siguiente script:
 
 luego podras ver la aplicacion web en
 
-`http:localhost:1234`
+`http://localhost:1234`
