@@ -25,7 +25,13 @@ const Home = () => {
           <h1>No pokemons Found</h1>
         ) : (
           leagues.map((league) => {
-            return <PokemonLeague name={league.name} url={league.url} />;
+            return (
+              <PokemonLeague
+                name={league.name}
+                url={league.url}
+                key={league.name}
+              />
+            );
           })
         )}
       </div>

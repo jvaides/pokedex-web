@@ -16,12 +16,12 @@ const TeamList = (teamlist) => {
   }
   return (
     <div>
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         Mis equipos
       </h5>
       <div className="grid gap-4 grid-cols-3 ">
         {Object.keys(teamlist.teamList).map((key, index) => (
-          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <TeamListItem
               pokemon={teamlist.teamList[key]}
               fkey={key}

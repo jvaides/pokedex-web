@@ -76,7 +76,7 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                           Editar Equipo
                         </Dialog.Title>
                         <div className="mt-2">
-                          <div class="mt-2">
+                          <div className="mt-2">
                             <p>
                               Los equipos deben de tener un minimo de 3 pokemons
                               y un maximo de 6 pokemos
@@ -89,8 +89,8 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                                   return (
                                     <div>
                                       {pokemons.pokemons.length > 3 ? (
-                                        <div class="relative ">
-                                          <div class="absolute top-0 right-0 h-16 w-16">
+                                        <div className="relative ">
+                                          <div className="absolute top-0 right-0 h-16 w-16">
                                             <div className="mx-auto flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-8 sm:w-8">
                                               <TrashIcon
                                                 className="h-4 w-4 text-red-600"
@@ -110,7 +110,7 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                                       )}
 
                                       <img
-                                        class="rounded-t-lg"
+                                        className="rounded-t-lg"
                                         src={league.pokemon_image}
                                         alt=""
                                         title={league.name}
@@ -123,21 +123,21 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                             </div>
                           </div>
                         </div>
-                        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                           <Link
                             to={`/league/pokemons/${pokemons.region}`}
-                            class="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                            className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                           >
                             Agregar otro pokemon
                             <svg
                               aria-hidden="true"
-                              class="w-4 h-4 ml-2 -mr-1"
+                              className="w-4 h-4 ml-2 -mr-1"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                fill-rule="evenodd"
+                                fillRule="evenodd"
                                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                                 clipRule="evenodd"
                               ></path>
@@ -147,7 +147,7 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                             type="button"
                             ref={cancelButtonRef}
                             onClick={() => setOpen(false)}
-                            class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                            className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                           >
                             Cancel
                           </button>
