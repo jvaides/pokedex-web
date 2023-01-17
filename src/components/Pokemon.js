@@ -1,15 +1,9 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import usePokemon from "../hooks/usePokemon";
 import PokemonItem from "./PokemonItem";
 const Pokemon = ({ entry_number, name, url, addPokemonToTeam }) => {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonDetailss] = usePokemon(pokemonName);
-  /*const [pokemonForTeam, setPokemonForTeam] = useState({});
-
-  const addPokemonToTeam = (chosenPokemon) => {
-    setPokemonForTeam(chosenPokemon);
-  };*/
 
   useEffect(() => {
     setPokemonName(name);

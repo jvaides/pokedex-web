@@ -15,10 +15,10 @@ export default function usePokedex(pokedexUrl) {
     } else if (localCache[pokedexUrl]) {
       setPokemonEntries(localCache[pokedexUrl]);
     } else {
-      requestBreedList();
+      request();
     }
 
-    async function requestBreedList() {
+    async function request() {
       setPokemonEntries([]);
       setStatus("loading");
       const res = await fetch(`${pokedexUrl}`);

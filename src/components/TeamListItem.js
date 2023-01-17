@@ -25,7 +25,7 @@ const TeamListItem = ({ pokemon, fkey, showTeamInfo }) => {
         </h5>
         <div className="grid gap-4 grid-cols-3 ">
           {!pokemon.pokemons.length ? (
-            <h1>No Pets Found</h1>
+            <h1>No hay pokemons</h1>
           ) : (
             pokemon.pokemons.map((league) => {
               return (

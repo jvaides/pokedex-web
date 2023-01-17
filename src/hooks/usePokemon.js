@@ -15,10 +15,10 @@ export default function usePokedex(pokemonName) {
     } else if (localCache[pokemonName]) {
       setPokemonInformation(localCache[pokemonName]);
     } else {
-      requestBreedList();
+      request();
     }
 
-    async function requestBreedList() {
+    async function request() {
       setPokemonInformation([]);
       setStatus("loading pokemon ");
       const res = await fetch(

@@ -22,10 +22,10 @@ export default function useRegisterFirDatabase(
     } else if (localCache[userId]) {
       setStatus(localCache[userId]);
     } else {
-      requestBreedList();
+      request();
     }
 
-    async function requestBreedList() {
+    async function request() {
       if (shouldInsertDB === true) {
         setStatus("loading");
         const data = {
@@ -49,6 +49,5 @@ export default function useRegisterFirDatabase(
     }
   }, [userId]);
 
-  "useRegisterFirDatabase", status;
   return [status];
 }

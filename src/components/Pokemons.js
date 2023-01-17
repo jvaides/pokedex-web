@@ -1,12 +1,11 @@
-import { React, Component } from "react";
+import { React } from "react";
 import { useEffect, useState } from "react";
-import { useSearchParams, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Pokemon from "./Pokemon";
 import usePokedex from "../hooks/usePokedex";
 import TeamModal from "./TeamModal";
 import NavBar from "./NavBar";
 const Pokemons = () => {
-  //const [pokemonEntries, setPokemonEntries] = useState([]);
   const [pokedexUrl, setPokedexUrl] = useState("");
   const [pokemonEntries] = usePokedex(pokedexUrl);
   const params = useParams();

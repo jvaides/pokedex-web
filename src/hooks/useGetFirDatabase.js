@@ -17,10 +17,10 @@ export default function useGetFirDatabase(userId) {
     } else if (localCache[userId]) {
       setTeamEntries(localCache[userId]);
     } else {
-      requestBreedList();
+      request();
     }
 
-    async function requestBreedList() {
+    async function request() {
       setTeamEntries([]);
       setStatus("loading");
       const starCountRef = ref(database, "teams/" + userId);

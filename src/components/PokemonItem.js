@@ -1,21 +1,19 @@
 const PokemonItem = ({ pokemon, addPokemonToTeam }) => {
   if (pokemon.sprites == undefined) {
-    return <div>Loading...</div>;
+    return <div>Cargando ...</div>;
   }
   return (
     <div>
       <img class="rounded-t-lg" src={pokemon.sprites.front_default} alt="" />
       <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {pokemon.name}
-          </h5>
-        </a>
-        <div>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {pokemon.name}
+        </h5>
+        <div className="text-gray-900 dark:text-white">
           <ul>
             <li>Experiencia:{pokemon.base_experience}</li>
             <li>Tamaño:{pokemon.height}</li>
-            <li>Weight:{pokemon.weight}</li>
+            <li>Peso:{pokemon.weight}</li>
           </ul>
         </div>
         <button

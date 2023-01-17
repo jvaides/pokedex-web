@@ -1,9 +1,7 @@
 import { useEffect, useState, Fragment, useRef } from "react";
 import { auth, database } from "../service/firebase";
-import useGetFirDatabase from "../hooks/useGetFirDatabase";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import { ref, push, update } from "firebase/database";
+import { Transition } from "@headlessui/react";
+import { ref, update } from "firebase/database";
 import { Dialog, Transition } from "@headlessui/react";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -20,31 +18,16 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
     if (pokemons.pokemons.length > 3) {
       pokemons.pokemons.splice(pokemonId, 1);
       pokemons;
-      const starCountRef = ref(
+      const pokemonRef = ref(
         database,
         "teams/" + auth.currentUser.uid + "/" + teamkey
       );
-      update(starCountRef, pokemons)
-        .then(() => {
-          //setOpen(false);
-        })
+      update(pokemonRef, pokemons)
+        .then(() => {})
         .catch((error) => {
           ("unloaded");
         });
     }
-
-    /*if (existingpokemons.length <= 5) {
-      existingpokemons.push(pokemonInsert);
-      const data = {
-        user: auth.currentUser.displayName,
-        region: region,
-        pokemons: existingpokemons,
-      };
-      
-      
-    } else {
-      ("limit has reached");
-    }*/
   };
 
   if (teamkey === "") {
@@ -100,7 +83,7 @@ const ExistingTeamModal = ({ pokemons, teamkey }) => {
                             </p>
                             <div className="grid gap-2 grid-cols-3 ">
                               {!pokemons.pokemons.length ? (
-                                <h1>No Pets Found</h1>
+                                <h1>No pokemons Found</h1>
                               ) : (
                                 pokemons.pokemons.map((league, index) => {
                                   return (

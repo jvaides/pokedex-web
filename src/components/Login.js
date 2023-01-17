@@ -1,5 +1,4 @@
 import { signInWithGoogle, auth } from "../service/firebase";
-import { useState, useEffect } from "react";
 
 import "../style.css";
 const Login = () => {

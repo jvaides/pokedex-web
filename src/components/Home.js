@@ -1,6 +1,5 @@
 import { React, Component } from "react";
 import { useEffect, useState } from "react";
-import { auth } from "../service/firebase";
 import NavBar from "./NavBar";
 import PokemonLeague from "./PokemonLeague";
 
@@ -17,14 +16,13 @@ const Home = () => {
     setLeagues(json.results);
   }
 
-  leagues;
   return (
     <div className="home">
       <NavBar />
 
       <div className="grid gap-4 grid-cols-4">
         {!leagues.length ? (
-          <h1>No Pets Found</h1>
+          <h1>No pokemons Found</h1>
         ) : (
           leagues.map((league) => {
             return <PokemonLeague name={league.name} url={league.url} />;

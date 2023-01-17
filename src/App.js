@@ -1,14 +1,6 @@
 import { render } from "react-dom";
 import { StrictMode, useState, useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  Navigate,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { auth } from "./service/firebase";
 
 import Login from "./components/Login";
