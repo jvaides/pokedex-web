@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { auth } from "../service/firebase";
-import { Navigate } from "react-router-dom";
 import "../style.css";
 
 const NavBar = ({ user }) => {

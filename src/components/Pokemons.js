@@ -28,7 +28,7 @@ const Pokemons = () => {
   return (
     <div>
       <NavBar />
-      <div className="grid gap-4 grid-cols-4 ">
+      <div className="grid gap-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4  mx-3.5">
         {!pokemonEntries.length ? (
           <h1>No pokemons Found</h1>
         ) : (
